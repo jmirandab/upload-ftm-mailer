@@ -1,0 +1,49 @@
+
+type fieldNamesType = {
+    nombre: string;
+    genero: string;
+    telefono: string;
+    correo: string;
+    etnia: string;
+    comunidadLinguistica: string;
+    organizacion: string;
+    comunidad: string;
+    municipio: string;
+    departamento: string;
+    textarea1: string;
+    textarea2: string;
+    textarea3: string;
+    textarea4: string;
+    textarea5: string;
+    [key: string]: string; // Index signature 
+  };
+  
+  
+  const fieldNames: fieldNamesType = {
+    nombre: 'Nombre',
+    genero: 'Género',
+    telefono: 'Teléfono',
+    correo: 'Correo',
+    etnia: 'Etnia',
+    comunidadLinguistica: 'Comunidad lingüística',
+    organizacion: 'Organización',
+    comunidad: 'Comunidad',
+    municipio: 'Municipio',
+    departamento: 'Departamento',
+    textarea1: 'Motivo de preocupación como resultado de las siguientes fallas, desatenciones o agravios:',
+    textarea2: 'Indicar el nombre de la persona o agencia que causa el problema (empresas contratistas, organizaciones implementadoras, instituciones del estado, personas particulares, técnicos, entre otros.)',
+    textarea3: 'Descripción de las consecuencias que derivaron de las fallas o desatenciones del FTM y/u otros socios ejecutores',
+    textarea4: 'Listado (si se conoce) de los principios o procedimientos del proyecto que se considera que no se respetaron',
+    textarea5: 'Menciones que medidas correctivas y/o que soluciones de remediación y compensación se deberían de llevar a cabo frente a los posibles problemas causados'
+  }
+  
+  function getFieldName(key: keyof fieldNamesType){
+    return fieldNames[key] || key;
+  }
+
+
+  function getValue(val:string){
+    return val || "N/R";
+  }
+
+  export {fieldNamesType, fieldNames, getFieldName,getValue }
