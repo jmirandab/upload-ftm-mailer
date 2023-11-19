@@ -18,7 +18,7 @@ const allowedOrigins = ['https://jmirandab.github.io/', 'localhost:3000'];
 
 
 const app = express();
-const port = 403;
+const port = 443;
 
 // Enable CORS with specific options
 app.use(cors());
