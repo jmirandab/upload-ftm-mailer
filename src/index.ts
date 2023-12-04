@@ -5,7 +5,7 @@ import {getFieldName, getValue } from './utils'
 const cors = require('cors');
 
 
-const allowedOrigins = ['https://jmirandab.github.io/', 'localhost:3000'];
+const allowedOrigins = ['https://jmirandab.github.io/', 'www.fondomesoamericano.org', 'localhost:3000'];
 
 // const corsOptions = {
 //   origin: allowedOrigins,
